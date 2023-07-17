@@ -1,6 +1,8 @@
 # Improving Zero-Shot Generalization for CLIP with Synthesized Prompts
 
-We provide code of CoOp + SHIP.
+Official implementation of  [Improving Zero-Shot Generalization for CLIP with Synthesized Prompts](https://arxiv.org/abs/2307.07397).
+
+This paper has been accepted by **ICCV 2023**.
 
 ## Requirements
 ### Installation
@@ -22,9 +24,6 @@ Follow DATASET.md to install ImageNet and other 10 datasets referring to CoOp.
 ### Configs
 The running configurations can be modified in `coop-configs/dataset.yaml`, including shot numbers, visual encoders, and hyperparamters. 
 
-### Numerical Results
-We provide CoOp + SHIP's results of base-to-new generalization at coop_vae.log
-
 ### Running
 For ImageNet dataset:
 ```bash
@@ -35,3 +34,21 @@ For other 10 datasets:
 CUDA_VISIBLE_DEVICES=0 python main_coop_vae.py --config configs/dataset.yaml
 ```
 
+## Acknowledgement
+
+This repo benefits from [CLIP](https://github.com/openai/CLIP), [CoOp](https://github.com/KaiyangZhou/Dassl.pytorch) and [Tip-Adapter](https://github.com/gaopengcuhk/Tip-Adapter). Thanks for their wonderful works.
+
+## Citation
+
+```
+@article{wang2023improving,
+  title={Improving Zero-Shot Generalization for CLIP with Synthesized Prompts},
+  author={Zhengbo Wang and Jian Liang and Ran He and Nan Xu and Zilei Wang and Tieniu Tan},
+  journal={arXiv preprint arXiv:2307.07397},
+  year={2023}
+}
+```
+
+## Contact
+
+If you have any question, feel free to contact zhengbowang@mail.ustc.edu.cn.
