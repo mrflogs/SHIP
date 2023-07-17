@@ -1,0 +1,15 @@
+_Store
+.idea
+__pycache__/
+venv*
+*.pyc
+*.log
+.ipynb_checkpoints
+
+
+
+
+
+
+
+
