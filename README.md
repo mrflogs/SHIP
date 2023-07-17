@@ -41,10 +41,10 @@ This repo benefits from [CLIP](https://github.com/openai/CLIP), [CoOp](https://g
 ## Citation
 
 ```
-@article{wang2023improving,
+@inproceedings{wang2023improving,
   title={Improving Zero-Shot Generalization for CLIP with Synthesized Prompts},
   author={Zhengbo Wang and Jian Liang and Ran He and Nan Xu and Zilei Wang and Tieniu Tan},
-  journal={arXiv preprint arXiv:2307.07397},
+  booktitle={IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2023}
 }
 ```
