@@ -131,7 +131,7 @@ def run_coop(cfg, text_encoder, prompt_learner, clip_weights, clip_model, netG=N
                     text_features = clip_weights.T[gen_target].float()
                     bias = netG(z)
                     prompt_learner.get_prefix_suffix_token(all_classnames, clip_model) # update prefix and suffix for new dataset.
-                    prompts = prompt_learner(bias, gen_target) # wrong here.
+                    prompts = prompt_learner(bias, gen_target) 
                     tokenized_prompts = prompt_learner.tokenized_prompts
                     text_features = text_encoder(prompts, tokenized_prompts[gen_target])
                     gen_feature = text_features / text_features.norm(dim=-1, keepdim=True)
@@ -257,7 +257,6 @@ class PromptLearner(nn.Module):
         bias = bias.unsqueeze(1)           # (batch, 1, ctx_dim)
         ctx = ctx.unsqueeze(0)             # (1, n_ctx, ctx_dim)
         ctx_shifted = ctx + bias           # (batch, n_ctx, ctx_dim)
-        ctx_shifted = bias           # (batch, n_ctx, ctx_dim)
         prompts = torch.cat([prefix, ctx_shifted, suffix], dim=1)
         return prompts
     
